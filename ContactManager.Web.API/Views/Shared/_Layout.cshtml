@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html ng-app="XiVTechContactManager">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+    <title>Contact Manager</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
+    <link rel="stylesheet" id="css-main" href="~/Content/assets/css/oneui.css">
+    <link href="~/Content/assets/css/themes/amethyst.min.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+
+    @RenderBody()
+
+
+    <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
+    <script src="~/Content/assets/js/core/jquery.min.js"></script>
+    <script src="~/Content/assets/js/core/bootstrap.min.js"></script>
+    <script src="~/Content/assets/js/core/jquery.slimscroll.min.js"></script>
+    <script src="~/Content/assets/js/core/jquery.scrollLock.min.js"></script>
+    <script src="~/Content/assets/js/core/jquery.appear.min.js"></script>
+    <script src="~/Content/assets/js/core/jquery.countTo.min.js"></script>
+    <script src="~/Content/assets/js/core/jquery.placeholder.min.js"></script>
+    <script src="~/Content/assets/js/core/js.cookie.min.js"></script>
+    <script src="~/Content/assets/js/app.js"></script>
+
+    <!-- Page JS Plugins -->
+    <script src="~/Content/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+
+    <!-- Page JS Code -->
+    <script src="~/Content/assets/js/pages/base_pages_login.js"></script>
+    <script src="~/Content/assets/js/pages/base_pages_register.js"></script>
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+
+    <!-- Module Files -->
+    <script src="~/app/modules.js"></script>
+    <script src="~/app/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="~/app/controllers/loginController.js"></script>
+    <script src="~/app/controllers/registerController.js"></script>
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
