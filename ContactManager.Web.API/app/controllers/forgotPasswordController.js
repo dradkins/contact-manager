@@ -1,8 +1,8 @@
 ﻿(function (module) {
 
-    var registerController = function ($scope) {
+    var forgotPasswordController = function ($scope) {
 
-        $scope.register = function (formId) {
+        $scope.resetPassword = function (formId) {
             if ($(formId).valid()) {
                 alert("Valid form");
             }
@@ -13,7 +13,7 @@
 
     };
 
-    registerController.$inject = ["$scope"];
-    module.controller("registerController", registerController);
+    forgotPasswordController.$inject = ["$scope"];
+    module.controller("forgotPasswordController", forgotPasswordController);
 
 }(angular.module("XiVTechContactManager.controllers")));

@@ -5,5 +5,4 @@
     angular.module("XiVTechContactManager.directives", []);
     angular.module("XiVTechContactManager.interceptors", []);
 
-
 }());

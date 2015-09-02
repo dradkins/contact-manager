@@ -232,11 +232,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\controllers\forgotPasswordController.js" />
     <Content Include="app\controllers\loginController.js" />
     <Content Include="app\controllers\registerController.js" />
+    <Content Include="app\directives\forgot-password-validate.js" />
+    <Content Include="app\directives\form-input.js" />
+    <Content Include="app\directives\login-validate.js" />
+    <Content Include="app\directives\register-validate.js" />
     <Content Include="app\modules.js" />
-    <Content Include="app\views\login.html" />
-    <Content Include="app\views\register.html" />
+    <Content Include="app\services\formEncode.js" />
+    <Content Include="app\services\oauth.js" />
+    <Content Include="app\templates\forgot-password.html" />
+    <Content Include="app\templates\login.html" />
+    <Content Include="app\templates\register.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="favicon.ico" />
     <Content Include="Content\assets\css\oneui.css" />
@@ -735,6 +743,8 @@
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-ui-router.js" />
+    <Content Include="Scripts\angular-ui-router.min.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
@@ -829,9 +839,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\directives\" />
     <Folder Include="app\interceptors\" />
-    <Folder Include="app\services\" />
     <Folder Include="App_Data\" />
     <Folder Include="Content\images\" />
   </ItemGroup>

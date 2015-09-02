@@ -30,21 +30,23 @@
     <!-- Page JS Plugins -->
     <script src="~/Content/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
 
-    <!-- Page JS Code -->
-    <script src="~/Content/assets/js/pages/base_pages_login.js"></script>
-    <script src="~/Content/assets/js/pages/base_pages_register.js"></script>
-
     <script src="~/Scripts/angular.min.js"></script>
-    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/angular-ui-router.js"></script>
 
     <!-- Module Files -->
     <script src="~/app/modules.js"></script>
     <script src="~/app/app.js"></script>
 
+    <!-- Directives -->
+    <script src="~/app/directives/form-input.js"></script>
+    <script src="~/app/directives/login-validate.js"></script>
+    <script src="~/app/directives/register-validate.js"></script>
+    <script src="~/app/directives/forgot-password-validate.js"></script>
+
     <!-- Controllers -->
     <script src="~/app/controllers/loginController.js"></script>
     <script src="~/app/controllers/registerController.js"></script>
-
+    <script src="~/app/controllers/forgotPasswordController.js"></script>
 
     @RenderSection("scripts", required: false)
 </body>

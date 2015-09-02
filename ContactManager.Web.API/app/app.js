@@ -5,21 +5,15 @@
         "XiVTechContactManager.services",
         "XiVTechContactManager.directives",
         "XiVTechContactManager.interceptors",
-        "ngRoute"
+        "ui.router"
     ]);
 
-    app.config(function ($routeProvider) {
+    app.config(function ($stateProvider) {
 
-        $routeProvider
-            .when("/login", {
-                templateUrl: "/app/views/login.html",
-                controller: "loginController"
-            })
-            .when("/register", {
-                templateUrl: "/app/views/register.html",
-                controller: "registerController"
-            })
-            .otherwise({ redirectTo: "/login" });
+        $stateProvider
+            .state("login", { url: "/login", templateUrl: "/app/templates/login.html", controller: "loginController" })
+            .state("register", { url: "/register", templateUrl: "/app/templates/register.html", controller: "registerController" })
+            .state("forgot-password", { url: "/forgot-password", templateUrl: "/app/templates/forgot-password.html", controller: "forgotPasswordController" })
 
     });
 
