@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
     <link rel="stylesheet" id="css-main" href="~/Content/assets/css/oneui.css">
     <link href="~/Content/assets/css/themes/amethyst.min.css" rel="stylesheet" />
+    <link href="~/Content/angular-toastr.min.css" rel="stylesheet" />
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -32,6 +33,7 @@
 
     <script src="~/Scripts/angular.min.js"></script>
     <script src="~/Scripts/angular-ui-router.js"></script>
+    <script src="~/Scripts/angular-toastr.tpls.min.js"></script>
 
     <!-- Module Files -->
     <script src="~/app/modules.js"></script>
@@ -42,6 +44,11 @@
     <script src="~/app/directives/login-validate.js"></script>
     <script src="~/app/directives/register-validate.js"></script>
     <script src="~/app/directives/forgot-password-validate.js"></script>
+
+    <!-- Services -->
+    <script src="~/app/services/formEncode.js"></script>
+    <script src="~/app/services/currentuser.js"></script>
+    <script src="~/app/services/oauth.js"></script>
 
     <!-- Controllers -->
     <script src="~/app/controllers/loginController.js"></script>

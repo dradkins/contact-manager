@@ -5,7 +5,8 @@
         "XiVTechContactManager.services",
         "XiVTechContactManager.directives",
         "XiVTechContactManager.interceptors",
-        "ui.router"
+        "ui.router",
+        "toastr"
     ]);
 
     app.config(function ($stateProvider) {

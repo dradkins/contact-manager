@@ -21,7 +21,7 @@
                     rules: {
                         'login-username': {
                             required: true,
-                            minlength: 3
+                            email:true,
                         },
                         'login-password': {
                             required: true,
@@ -30,8 +30,8 @@
                     },
                     messages: {
                         'login-username': {
-                            required: 'Please enter a username',
-                            minlength: 'Your username must consist of at least 3 characters'
+                            required: 'Please enter an email address',
+                            email: 'Please enter a valid email address',
                         },
                         'login-password': {
                             required: 'Please provide a password',

@@ -10,6 +10,6 @@
         }
     }
 
-    module.factory("FormEncode", formEncode);
+    module.factory("formEncode", formEncode);
 
 }(angular.module("XiVTechContactManager.services")));

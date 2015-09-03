@@ -23,7 +23,7 @@
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <div class="form-material form-material-success">
-                                    <input class="form-control" type="text" id="register-username" name="register-username" placeholder="Please enter your full name">
+                                    <input class="form-control" type="text" id="register-username" name="register-username" placeholder="Please enter your full name" ng-model="model.fullName">
                                     <label for="register-username">Full Name</label>
                                 </div>
                             </div>
@@ -31,7 +31,7 @@
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <div class="form-material form-material-success">
-                                    <input class="form-control" type="email" id="register-email" name="register-email" placeholder="Please provide your email">
+                                    <input class="form-control" type="email" id="register-email" name="register-email" placeholder="Please provide your email" ng-model="model.email">
                                     <label for="register-email">Email</label>
                                 </div>
                             </div>
@@ -39,7 +39,7 @@
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <div class="form-material form-material-success">
-                                    <input class="form-control" type="password" id="register-password" name="register-password" placeholder="Choose a strong password..">
+                                    <input class="form-control" type="password" id="register-password" name="register-password" placeholder="Choose a strong password.." ng-model="model.password">
                                     <label for="register-password">Password</label>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <div class="form-material form-material-success">
-                                    <input class="form-control" type="password" id="register-password2" name="register-password2" placeholder="..and confirm it">
+                                    <input class="form-control" type="password" id="register-password2" name="register-password2" placeholder="..and confirm it" ng-model="model.confirmPassword">
                                     <label for="register-password2">Confirm Password</label>
                                 </div>
                             </div>
@@ -55,7 +55,7 @@
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <label class="css-input switch switch-sm switch-success">
-                                    <input type="checkbox" id="register-terms" name="register-terms"><span></span> I agree with terms &amp; conditions
+                                    <input type="checkbox" id="register-terms" name="register-terms" ng-model="model.isAgree"><span></span> I agree with terms &amp; conditions
                                 </label>
                             </div>
                         </div>

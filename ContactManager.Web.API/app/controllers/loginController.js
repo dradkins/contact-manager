@@ -1,6 +1,6 @@
 ﻿(function (module) {
 
-    var loginController = function ($scope, oauth, currentuser) {
+    var loginController = function ($scope, toastr, oauth, currentuser) {
 
         $scope.username = "";
         $scope.password = "";
@@ -9,18 +9,18 @@
         $scope.login = function (formId, formName) {
             if ($(formId).valid()) {
                 oauth.login($scope.username, $scope.password)
-                     .catch(alert("unable to login"));
+                     .catch(toastr.error("unable to login."));
                 $scope.password = $scope.username = "";
-                formName.$setPrestine()
+                formName.$setPristine()
             }
             else {
-                alert("Invalid form");
+                toastr.error("invalid data entered. please enter valid data and try again.");
             }
         }
 
     };
 
-    loginController.$inject = ["$scope"];
+    loginController.$inject = ["$scope", "toastr", "oauth", "currentuser"];
     module.controller("loginController", loginController);
 
 }(angular.module("XiVTechContactManager.controllers")));
