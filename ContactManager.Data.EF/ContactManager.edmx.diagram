@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d9ef966673b5440ea61baa88d9da7508" Name="Diagram1">
+        <EntityTypeShape EntityType="ContactManagerModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.Address" Width="1.5" PointX="7.5" PointY="47.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.AddressType" Width="1.5" PointX="5.25" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.AspNetRole" Width="1.5" PointX="0.75" PointY="40.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="29.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="32.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.AspNetUser" Width="1.5" PointX="3" PointY="32.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.Country" Width="1.5" PointX="5.25" PointY="54" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.EmailAddress" Width="1.5" PointX="7.5" PointY="54.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.EmailType" Width="1.5" PointX="5.25" PointY="40.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.Event" Width="1.5" PointX="12.75" PointY="46.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.EventType" Width="1.5" PointX="5.25" PointY="44.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.Group" Width="1.5" PointX="5.25" PointY="49" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.IMAccount" Width="1.5" PointX="10.5" PointY="56.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.IMType" Width="1.5" PointX="5.25" PointY="58.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.PersonCompany" Width="1.5" PointX="10.5" PointY="47" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.Person" Width="1.5" PointX="5.25" PointY="67.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.PersonsInGroup" Width="1.5" PointX="10.5" PointY="51.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.PhoneNumber" Width="1.5" PointX="7.5" PointY="60" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.PhoneNumberType" Width="1.5" PointX="5.25" PointY="76.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.Relationship" Width="1.5" PointX="10.5" PointY="62.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.RelationshipType" Width="1.5" PointX="5.25" PointY="80.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContactManagerModel.Website" Width="1.5" PointX="13.5" PointY="53" IsExpanded="true" />
+        <AssociationConnector Association="ContactManagerModel.FK__Addresses__Addre__08B54D69" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Addresses__Addre__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Addresses__Count__09A971A2" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Addresses__Count__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Addresses__Creat__0A9D95DB" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Addresses__Creat__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Addresses__Perso__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Addresses__Perso__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Addresses__Updat__0C85DE4D" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Addresses__Updat__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__AddressTy__Creat__0D7A0286" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__AddressTy__Creat__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__AddressTy__Updat__0E6E26BF" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__AddressTy__Updat__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__EmailAddr__Creat__0F624AF8" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__EmailAddr__Creat__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__EmailAddr__Updat__123EB7A3" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__EmailAddr__Updat__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__EmailType__Creat__1332DBDC" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__EmailType__Creat__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__EmailType__Updat__14270015" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__EmailType__Updat__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Events__CreatedB__151B244E" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Events__CreatedB__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Events__UpdatedB__18EBB532" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Events__UpdatedB__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__EventType__Creat__19DFD96B" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__EventType__Creat__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__EventType__Updat__1AD3FDA4" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__EventType__Updat__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Groups__CreatedB__1BC821DD" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Groups__CreatedB__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Groups__UpdatedB__1CBC4616" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Groups__UpdatedB__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__IMAccount__Creat__1DB06A4F" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__IMAccount__Creat__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__IMAccount__Updat__208CD6FA" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__IMAccount__Updat__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__IMTypes__Created__2180FB33" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__IMTypes__Created__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__IMTypes__Updated__22751F6C" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__IMTypes__Updated__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PersonCom__Creat__236943A5" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PersonCom__Creat__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PersonCom__Updat__25518C17" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PersonCom__Updat__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Persons__Created__2645B050" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Persons__Created__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Persons__Updated__2739D489" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Persons__Updated__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PersonsIn__Creat__282DF8C2" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PersonsIn__Creat__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PersonsIn__Updat__2B0A656D" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PersonsIn__Updat__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PhoneNumb__Creat__2BFE89A6" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PhoneNumb__Creat__2FCF1A8A" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PhoneNumb__Creat__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PhoneNumb__Creat__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PhoneNumb__Updat__2EDAF651" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PhoneNumb__Updat__30C33EC3" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PhoneNumb__Updat__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PhoneNumb__Updat__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Relations__Creat__31B762FC" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Relations__Creat__3587F3E0" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Relations__Creat__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Relations__Creat__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Relations__Updat__3493CFA7" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Relations__Updat__367C1819" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Relations__Updat__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Relations__Updat__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Websites__Create__37703C52" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Websites__Create__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Websites__Update__395884C4" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Websites__Update__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__EmailAddr__Email__10566F31" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__EmailAddr__Email__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__EmailAddr__Perso__114A936A" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__EmailAddr__Perso__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Events__Selected__17F790F9" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Events__Selected__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Events__EventTyp__160F4887" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Events__EventTyp__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Events__PersonId__17036CC0" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Events__PersonId__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PersonsIn__Group__29221CFB" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PersonsIn__Group__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__IMAccount__IMTyp__1EA48E88" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__IMAccount__IMTyp__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__IMAccount__Perso__1F98B2C1" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__IMAccount__Perso__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PersonCom__Perso__245D67DE" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PersonCom__Perso__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PersonsIn__Perso__2A164134" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PersonsIn__Perso__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PhoneNumb__Perso__2CF2ADDF" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PhoneNumb__Perso__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Relations__Perso__32AB8735" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Relations__Perso__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Websites__Person__3864608B" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Websites__Person__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PhoneNumb__Phone__2DE6D218" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__PhoneNumb__Phone__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Relations__Relat__339FAB6E" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.FK__Relations__Relat__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="ContactManagerModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

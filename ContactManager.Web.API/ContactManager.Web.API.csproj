@@ -239,8 +239,9 @@
     <Content Include="app\directives\form-input.js" />
     <Content Include="app\directives\login-validate.js" />
     <Content Include="app\directives\register-validate.js" />
+    <Content Include="app\interceptors\addToken.js" />
     <Content Include="app\modules.js" />
-    <Content Include="app\services\currentuser.js" />
+    <Content Include="app\services\currentUser.js" />
     <Content Include="app\services\formEncode.js" />
     <Content Include="app\services\oauth.js" />
     <Content Include="app\templates\forgot-password.html" />
@@ -846,7 +847,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\interceptors\" />
     <Folder Include="App_Data\" />
     <Folder Include="Content\images\" />
   </ItemGroup>
