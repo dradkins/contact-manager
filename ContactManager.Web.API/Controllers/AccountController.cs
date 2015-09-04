@@ -337,6 +337,12 @@ namespace ContactManager.Web.API.Controllers
                 return GetErrorResult(result);
             }
 
+            string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+            var callbackUrl = string.Format("http://localhost:8267/#/confirm-email/{0}/{1}", user.Id, code);
+            await UserManager.SendEmailAsync(user.Id,
+               "Confirm your account", "Please confirm your account by clicking <a href=\""
+               + callbackUrl + "\">here</a>");
+
             return Ok();
         }
 

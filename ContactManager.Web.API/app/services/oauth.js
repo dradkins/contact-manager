@@ -23,9 +23,14 @@
                         });
         }
 
-        return {
-            login: login
+        var register = function (registerModel) {
+            return $http.post("/api/account/register", registerModel);
         }
+
+        return {
+            login: login,
+            register: register
+        };
 
     };
 

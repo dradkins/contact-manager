@@ -221,6 +221,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\EmailService.cs" />
     <Compile Include="Helpers\Extensions.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -244,6 +245,7 @@
     <Content Include="app\services\currentUser.js" />
     <Content Include="app\services\formEncode.js" />
     <Content Include="app\services\oauth.js" />
+    <Content Include="app\templates\email-confirm.html" />
     <Content Include="app\templates\forgot-password.html" />
     <Content Include="app\templates\login.html" />
     <Content Include="app\templates\register.html" />

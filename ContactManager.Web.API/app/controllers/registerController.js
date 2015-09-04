@@ -1,27 +1,42 @@
 ﻿(function (module) {
 
-    var registerController = function ($scope, toastr) {
+    var registerController = function ($scope, oauth, toastr) {
 
         $scope.model = {
             fullname: "",
             email: "",
             password: "",
             confirmPassword: "",
-            isAgree: false
         };
 
+        $scope.isAgree = false;
+
         $scope.register = function (formId) {
+            if (!$scope.isAgree) {
+                toastr.info("please agree term and conditions to process further.")
+                return false;
+            }
             if ($(formId).valid()) {
-                alert("Valid form");
+                oauth.register(model)
+                     .then(onRegisterSuccess, onRegisterError);
             }
             else {
                 toastr.error("invalid data entered. please enter valid data and try again.");
             }
         }
 
+        var onRegisterSuccess = function (data) {
+            toastr.success("registered successfully");
+            $location.path("/email-confirm");
+        }
+
+        var onRegisterError = function (error) {
+            toastr.error("unable to register now. please try again");
+        }
+
     };
 
-    registerController.$inject = ["$scope", "toastr"];
+    registerController.$inject = ["$scope", "oauth", "toastr"];
     module.controller("registerController", registerController);
 
 }(angular.module("XiVTechContactManager.controllers")));
