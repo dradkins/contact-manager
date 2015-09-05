@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Net.Mail;
 using System.Net.Mime;
 
-namespace ContactManager.Web.API.Helpers
+namespace ContactManager.Web.API.Services
 {
     public class EmailService : IIdentityMessageService
     {
@@ -22,10 +22,11 @@ namespace ContactManager.Web.API.Helpers
         private void SendEmailAsync(IdentityMessage message)
         {
             #region formatter
-            string text = string.Format("Please click on this link to {0}: {1}", message.Subject, message.Body);
-            string html = "Please confirm your account by clicking this link: <a href=\"" + message.Body + "\">link</a><br/>";
 
-            html += HttpUtility.HtmlEncode(@"Or click on the copy the following link on the browser:" + message.Body);
+            string text = string.Format("Please click on this link to {0}: <a href=\"{1}\">", message.Subject, message.Body);
+            string html = "Please confirm your account by clicking this link: <a href=\"" + message.Body + "\">link</a><br/><br>";
+            html += HttpUtility.HtmlEncode(@"Or copy the following link on the browser: " + message.Body);
+
             #endregion
 
             var emailAddress = ConfigurationManager.AppSettings["mailAccount"];
@@ -38,13 +39,13 @@ namespace ContactManager.Web.API.Helpers
             msg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(html, null, MediaTypeNames.Text.Html));
 
             SmtpClient smtp = new SmtpClient();
-            smtp.Host = "mail.drnajeebvideos.com";
+            smtp.Host = "mail.xivtech.com";
             smtp.Port = 25;
-            smtp.Credentials = new NetworkCredential("info@drnajeebvideos.com", "@Dmin123");
+            smtp.Credentials = new NetworkCredential(emailAddress, password);
             smtp.Timeout = 20000;
             System.Net.NetworkCredential credentials = new System.Net.NetworkCredential(emailAddress, password);
             smtp.Credentials = credentials;
-            smtp.EnableSsl = true;
+            //smtp.EnableSsl = true;
             smtp.Send(msg);
         }
     }

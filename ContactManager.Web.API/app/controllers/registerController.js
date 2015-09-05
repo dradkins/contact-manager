@@ -1,6 +1,6 @@
 ﻿(function (module) {
 
-    var registerController = function ($scope, oauth, toastr) {
+    var registerController = function ($scope, $location, oauth, toastr) {
 
         $scope.model = {
             fullname: "",
@@ -17,7 +17,7 @@
                 return false;
             }
             if ($(formId).valid()) {
-                oauth.register(model)
+                oauth.register($scope.model)
                      .then(onRegisterSuccess, onRegisterError);
             }
             else {
@@ -36,7 +36,7 @@
 
     };
 
-    registerController.$inject = ["$scope", "oauth", "toastr"];
+    registerController.$inject = ["$scope", "$location", "oauth", "toastr"];
     module.controller("registerController", registerController);
 
 }(angular.module("XiVTechContactManager.controllers")));
