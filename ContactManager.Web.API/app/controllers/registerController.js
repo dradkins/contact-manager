@@ -3,10 +3,10 @@
     var registerController = function ($scope, $location, oauth, toastr) {
 
         $scope.model = {
-            fullname: "",
-            email: "",
-            password: "",
-            confirmPassword: "",
+            fullName: "Hammad Hanif",
+            email: "hammadhanif@hotmail.com",
+            password: "@Dmin123",
+            confirmPassword: "@Dmin123",
         };
 
         $scope.isAgree = false;

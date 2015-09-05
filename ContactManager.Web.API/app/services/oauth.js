@@ -27,9 +27,19 @@
             return $http.post("/api/account/register", registerModel);
         }
 
+        var confirmEmail = function (userId, code) {
+            return $http.get("/api/account/confirmEmail", { params: { userId: userId, code: code } });
+        }
+
+        var resendConfirmationEmail = function (email) {
+            return $http.get("/api/account/resendConfirmationEmail", { params: { email: email } });
+        }
+
         return {
             login: login,
-            register: register
+            register: register,
+            confirmEmail: confirmEmail,
+            resendConfirmationEmail: resendConfirmationEmail
         };
 
     };

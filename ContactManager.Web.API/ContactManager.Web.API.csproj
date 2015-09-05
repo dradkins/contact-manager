@@ -233,6 +233,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\controllers\confirmEmailController.js" />
     <Content Include="app\controllers\forgotPasswordController.js" />
     <Content Include="app\controllers\loginController.js" />
     <Content Include="app\controllers\registerController.js" />
@@ -245,6 +246,7 @@
     <Content Include="app\services\currentUser.js" />
     <Content Include="app\services\formEncode.js" />
     <Content Include="app\services\oauth.js" />
+    <Content Include="app\templates\confirm-email.html" />
     <Content Include="app\templates\email-confirm.html" />
     <Content Include="app\templates\forgot-password.html" />
     <Content Include="app\templates\login.html" />

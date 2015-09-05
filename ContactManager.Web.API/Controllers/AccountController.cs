@@ -337,15 +337,54 @@ namespace ContactManager.Web.API.Controllers
                 return GetErrorResult(result);
             }
 
-            string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-            var callbackUrl = string.Format("http://localhost:8267/#/confirm-email/{0}/{1}", user.Id, code);
-            IdentityMessage message = new IdentityMessage();
-            message.Subject = "Confirm your account";
-            message.Body = "Please confirm your account by clicking";
-            await UserManager.SendEmailAsync(user.Id,
-               "Confirm your account", callbackUrl);
+            await SendConfirmationEmail(user.Id);
 
             return Ok();
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        [Route("ResendConfirmationEmail")]
+        public async Task<IHttpActionResult> ResendConfirmationEmail(string email = "")
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                ModelState.AddModelError("", "User Id and Code are required");
+                return BadRequest(ModelState);
+            }
+
+            ApplicationUser user = await UserManager.FindByNameAsync(email);
+            if (user==null)
+            {
+                return NotFound();
+            }
+
+            await SendConfirmationEmail(user.Id);
+
+            return Ok();
+        }
+
+        [HttpGet]
+        [Route("ConfirmEmail")]
+        [AllowAnonymous]
+        public async Task<IHttpActionResult> ConfirmEmail(string userId = "", string code = "")
+        {
+            if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(code))
+            {
+                ModelState.AddModelError("", "User Id and Code are required");
+                return BadRequest(ModelState);
+            }
+
+            IdentityResult result = await UserManager.ConfirmEmailAsync(userId, code);
+
+            if (result.Succeeded)
+            {
+                return Ok();
+            }
+            else
+            {
+                return GetErrorResult(result);
+            }
         }
 
         // POST api/Account/RegisterExternal
@@ -379,6 +418,13 @@ namespace ContactManager.Web.API.Controllers
                 return GetErrorResult(result);
             }
             return Ok();
+        }
+
+        private async Task SendConfirmationEmail(string userId)
+        {
+            string code = await UserManager.GenerateEmailConfirmationTokenAsync(userId);
+            var callbackUrl = string.Format("http://localhost:8267/#/confirm-email?userId={0}&confirmationToken={1}", userId, HttpUtility.UrlEncode(code));
+            await UserManager.SendEmailAsync(userId, "Confirm your account", callbackUrl);
         }
 
         protected override void Dispose(bool disposing)

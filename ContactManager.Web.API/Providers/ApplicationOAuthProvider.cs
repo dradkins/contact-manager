@@ -39,6 +39,11 @@ namespace ContactManager.Web.API.Providers
                 context.SetError("invalid_grant", "The user name or password is incorrect.");
                 return;
             }
+            else if (user.EmailConfirmed == false)
+            {
+                context.SetError("email_not_confirmed", "Please confirm your email before login");
+                return;
+            }
 
             ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(userManager,
                OAuthDefaults.AuthenticationType);

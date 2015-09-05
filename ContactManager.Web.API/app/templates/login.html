@@ -46,6 +46,13 @@
                             </div>
                         </div>
                     </form>
+
+                    <div class="alert alert-warning alert-dismissable" ng-if="showEmailConfirmation">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <h3 class="font-w300 push-15">Information</h3>
+
+                        <p>Email not confirmed. We send you an email confirmation link on account creation, however if you didn't receive that email click <a class="alert-link" href="" ng-click="resendEmailConfirmation()">here</a> to resend a confirmation link.</p>
+                    </div>
                 </div>
             </div>
         </div>
