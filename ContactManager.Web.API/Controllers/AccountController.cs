@@ -375,6 +375,7 @@ namespace ContactManager.Web.API.Controllers
                 return BadRequest(ModelState);
             }
 
+            code=code.Replace("%2F", "/");
             IdentityResult result = await UserManager.ConfirmEmailAsync(userId, code);
 
             if (result.Succeeded)
@@ -423,7 +424,7 @@ namespace ContactManager.Web.API.Controllers
         private async Task SendConfirmationEmail(string userId)
         {
             string code = await UserManager.GenerateEmailConfirmationTokenAsync(userId);
-            var callbackUrl = string.Format("http://localhost:8267/#/confirm-email?userId={0}&confirmationToken={1}", userId, HttpUtility.UrlEncode(code));
+            var callbackUrl = string.Format("http://localhost:8267/#/confirm-email/{0}/{1}", userId, HttpUtility.UrlEncode(code).Replace("%2f", "%252F"));
             await UserManager.SendEmailAsync(userId, "Confirm your account", callbackUrl);
         }
 

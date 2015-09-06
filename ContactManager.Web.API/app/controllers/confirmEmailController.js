@@ -2,9 +2,6 @@
 
     var confirmEmailController = function ($scope, toastr, $stateParams, oauth) {
 
-        $scope.title = "Success";
-        $scope.message = "Your email verified successfully";
-
         var init = function () {
             var confirmationToken = $stateParams.confirmationToken;
             var userId = $stateParams.userId;
