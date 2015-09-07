@@ -251,6 +251,7 @@
     <Content Include="app\templates\forgot-password.html" />
     <Content Include="app\templates\login.html" />
     <Content Include="app\templates\register.html" />
+    <Content Include="app\templates\reset-password.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\angular-toastr.css" />
     <Content Include="Content\angular-toastr.min.css" />

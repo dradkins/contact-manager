@@ -24,7 +24,7 @@ namespace ContactManager.Web.API.Services
             #region formatter
 
             string text = string.Format("Please click on this link to {0}: <a href=\"{1}\">", message.Subject, message.Body);
-            string html = "Please confirm your account by clicking this link: <a href=\"" + message.Body + "\">link</a><br/><br>";
+            string html = "Please " + message.Subject + " by clicking this link: <a href=\"" + message.Body + "\">link</a><br/><br>";
             html += HttpUtility.HtmlEncode(@"Or copy the following link on the browser: " + message.Body);
 
             #endregion

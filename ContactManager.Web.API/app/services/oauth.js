@@ -35,11 +35,16 @@
             return $http.get("/api/account/resendConfirmationEmail", { params: { email: email } });
         }
 
+        var sendResetPasswordToken = function (email) {
+            return $http.post("/api/account/forgotPassword", email);
+        }
+
         return {
             login: login,
             register: register,
             confirmEmail: confirmEmail,
-            resendConfirmationEmail: resendConfirmationEmail
+            resendConfirmationEmail: resendConfirmationEmail,
+            sendResetPasswordToken: sendResetPasswordToken,
         };
 
     };

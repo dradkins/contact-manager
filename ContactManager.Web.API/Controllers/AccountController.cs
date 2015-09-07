@@ -388,6 +388,54 @@ namespace ContactManager.Web.API.Controllers
             }
         }
 
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("ForgotPassword")]
+        public async Task<IHttpActionResult> ForgotPassword(ForgotPasswordBindingModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError("", "Please enter valid email address");
+                return BadRequest(ModelState);
+            }
+
+            ApplicationUser user = await UserManager.FindByNameAsync(model.Email);
+
+            //for security purpose don't show the user id
+            if (user == null || !(await UserManager.IsEmailConfirmedAsync(user.Id)))
+            {
+                return Ok();
+            }
+
+            string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
+            var callbackUrl = string.Format("http://localhost:8267/#/confirm-email/{0}/{1}", user.Id, HttpUtility.UrlEncode(code).Replace("%2f", "%252F"));
+            await UserManager.SendEmailAsync(user.Id, "Reset your password", callbackUrl);
+
+            return Ok();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("ResetPassword")]
+        public async Task<IHttpActionResult> ResetPassword(ResetPasswordBindingModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var user = await UserManager.FindByIdAsync(model.UserId);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            var result = await UserManager.ResetPasswordAsync(user.Id, model.Code, model.Password);
+            if (result.Succeeded)
+            {
+                return Ok();
+            }
+            return GetErrorResult(result);
+        }
+
         // POST api/Account/RegisterExternal
         [OverrideAuthentication]
         [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
